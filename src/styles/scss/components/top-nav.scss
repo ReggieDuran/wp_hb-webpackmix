@@ -1,0 +1,26 @@
+.top-nav {
+    height: 38px;
+    display: flex;
+    align-items: center;
+
+    ul {
+        display: flex;
+        justify-content: flex-end;
+
+        @media(max-width:$brMobile) {
+            justify-content: center;
+        }
+    }
+
+    a {
+        font-size: $fontSize-8;
+        color: $color-0;
+        margin-left: 8px;
+    }
+
+    li {
+        padding-left: 23px;
+        display: flex;
+        align-items: center;
+    }
+}

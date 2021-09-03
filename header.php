@@ -20,23 +20,37 @@
 
 <section id="main-container">
 	<header>
-		<div class="container-max">
-			<div class="main-header">
-				<div class="logo">
-					<a href="<?= get_site_url(); ?>">
-						<img src="<?= get_field('logo', 'option')['url'] ?>" width="135" height="82" alt="" title="">
-					</a>
-				</div>
-				<div class="navigation">
-					<?php 
-						wp_nav_menu( array(
-					        'menu' => 'Main Menu',
-					    ) );
-					?>
-				</div>
-				<div class="menu-hamburger">
-					<span></span>
-				</div>
+        <div class="top-nav" <?= get_field('background_color_tn', 'option') ? 'style="background:' . get_field('background_color_tn', 'option') . '"' : '' ?>>
+            <div class="container-max">
+				<ul>
+				 <?php
+				if( have_rows('add_navigation', 'option') ):
+					while( have_rows('add_navigation', 'option') ) : the_row();
+						$link = get_sub_field('link');
+						$icon = get_sub_field('icon');
+						if( $link ): 
+							$link_url = $link['url'];
+							$link_title = $link['title'];
+							$link_target = $link['target'] ? $link['target'] : '_self';
+						endif; ?>
+						<li>
+							<img src="<?= $icon['url'] ?>" alt="">
+							<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
+						</li>
+						<?php
+					endwhile;
+				endif;
+				?>
+				</ul>
+            </div>
+        </div>
+		<div class="main-nav">
+			<div class="container-max">
+				<?php 
+                    wp_nav_menu( array(
+                        'menu' => 'Main Menu',
+                    ) );
+                ?>
 			</div>
 		</div>
 	</header>

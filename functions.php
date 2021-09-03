@@ -7,7 +7,6 @@
     function register_my_menu() {
         register_nav_menu( 'primary', __( 'Main Menu', 'theme-slug' ) );
         register_nav_menu( 'secondary', __( 'Footer Menu', 'theme-slug' ) );
-        register_nav_menu( 'tertiary', __( 'Additional Menu', 'theme-slug' ) );
     }
 
     add_action( 'after_setup_theme', 'register_my_menu' );
