@@ -20,9 +20,9 @@
 
 <section id="main-container">
 	<header>
-        <div class="top-nav" <?= get_field('background_color_tn', 'option') ? 'style="background:' . get_field('background_color_tn', 'option') . '"' : '' ?>>
+        <div class="top-nav flex items-center" <?= get_field('background_color_tn', 'option') ? 'style="background:' . get_field('background_color_tn', 'option') . '"' : '' ?>>
             <div class="container-max">
-				<ul>
+				<ul class="flex justify-end">
 				 <?php
 				if( have_rows('add_navigation', 'option') ):
 					while( have_rows('add_navigation', 'option') ) : the_row();
@@ -33,7 +33,7 @@
 							$link_title = $link['title'];
 							$link_target = $link['target'] ? $link['target'] : '_self';
 						endif; ?>
-						<li>
+						<li class="flex items-center">
 							<img src="<?= $icon['url'] ?>" alt="">
 							<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 						</li>
@@ -44,13 +44,25 @@
 				</ul>
             </div>
         </div>
-		<div class="main-nav">
+		<div class="main-nav flex items-center">
 			<div class="container-max">
-				<?php 
-                    wp_nav_menu( array(
-                        'menu' => 'Main Menu',
-                    ) );
-                ?>
+				<div class="flex items-center justify-space-bet">
+					<?php $logo = get_field('logo', 'option'); ?>
+					<div class="site-logo">
+						<img src="<?= $logo['url'] ?>" alt="Helperbees Logo">
+					</div>
+					<?php 
+						wp_nav_menu( array(
+							'menu' => 'Main Menu',
+							'menu_class' => 'show-tbl text-center items-center'
+						) );
+					?>
+					<div class="mobile-nav">
+						<div class="menu-hamburger">
+							<span></span>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</header>
