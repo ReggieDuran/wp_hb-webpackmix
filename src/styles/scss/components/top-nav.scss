@@ -1,12 +1,7 @@
 .top-nav {
     height: 38px;
-    display: flex;
-    align-items: center;
-
+    
     ul {
-        display: flex;
-        justify-content: flex-end;
-
         @media(max-width:$brMobile) {
             justify-content: center;
         }
@@ -20,7 +15,5 @@
 
     li {
         padding-left: 23px;
-        display: flex;
-        align-items: center;
     }
 }
