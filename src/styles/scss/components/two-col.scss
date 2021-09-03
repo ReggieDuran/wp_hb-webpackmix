@@ -1,0 +1,23 @@
+#two-col {
+    .right-col,
+    .left-col {
+        flex: 1 1 50%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-radius: 20px;
+    }
+
+    .right-col {
+        margin-left: 30px;
+    }
+
+    .left-col {
+        margin-right: 30px;
+    }
+
+    .col-wrap {
+        max-width: 370px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

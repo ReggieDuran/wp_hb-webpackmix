@@ -115,6 +115,8 @@
 body.active-header_js {
 	.main-nav {
         ul {
+            background: $color-0;
+            z-index: 10;
             position: fixed;
             left: 0;
             right: 0;

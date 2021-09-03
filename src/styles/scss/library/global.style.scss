@@ -65,7 +65,7 @@ select {
 	width: 100%; 
 	max-width: $maxWidth; 
 	margin: 0 auto;
-	padding: 0 18px;
+	padding: 0 30px;
 }
 
 .owl-carousel {
@@ -127,6 +127,13 @@ select {
 }
 .text-center {
 	text-align: center;
+}
+
+.btn-outline {
+	border-radius: 10px;
+	padding: 10px 20px;
+	border: 2px solid $color-0;
+	color: $color-0;
 }
 
 #main-wrapper {

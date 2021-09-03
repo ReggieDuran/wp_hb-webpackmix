@@ -63,6 +63,14 @@
         flex: 1 1 25%;
         padding: 0 20px;
 
+        &:first-child {
+            padding-left: 0;
+        }
+
+        &:last-child {
+            padding-right: 0;
+        }
+
         @media(max-width: $brMobile) {
             flex-basis: 100%;
             padding: 0 0 30px 0;
