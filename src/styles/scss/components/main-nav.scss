@@ -10,7 +10,7 @@
         color: $color-2;
         font-size: $fontSize-8 + 3;
         line-height: 25px;
-        font-weight: 700;
+        font-family: 'allerbold';
         @include transition(color $duration-0 $easeInOutExpo);
     }
 

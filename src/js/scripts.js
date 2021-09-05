@@ -10,12 +10,12 @@ $(window).on('load',function(){
 		$('.no-scroll_js').removeClass('no-scroll_js');
 
 		setTimeout(function() {
-			var sal = require('sal.js');
+			// var sal = require('sal.js');
 
-			sal({
-				threshold: 0.5,
-				once: true,
-			});
+			// sal({
+			// 	threshold: 0.5,
+			// 	once: true,
+			// });
 		},200)
 
 	},500);
@@ -25,7 +25,8 @@ $(document).ready(function(){
 	stickyMenu();
 	navToggle();
 	disableSubmitBtn();
-	singleExpiCarousel();
+	sliderBanner();
+	howItWorksSlider();
 });
 
 $(window).on('scroll',function(){
@@ -92,11 +93,30 @@ function disableSubmitBtn() {
 }
 
 
-function singleExpiCarousel() {
-	$('.project-images .owl-carousel').owlCarousel({
+function sliderBanner() {
+	$('#slider-banner .owl-carousel').owlCarousel({
 		items: 1,
+		loop: true,
 		dots: true,
-		autoplay: false,
+		autoplay: true,
 		smartSpeed: 700,
+	});
+}
+
+function howItWorksSlider() {
+	$('#how-it-works .owl-carousel').owlCarousel({
+		smartSpeed: 700,
+		responsive:{
+			0:{
+				items:1,
+				dots: true
+			},
+			600:{
+				items:2,
+			},
+			1000:{
+				items:4,
+			}
+		}
 	});
 }

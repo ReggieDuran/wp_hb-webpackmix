@@ -10,19 +10,17 @@ h2,
 h3,
 h4,
 h5 {
-	font-weight: $wgtReg;
+    font-family: 'allerbold';
 }
 
 h1 {
-    font-size: $fontSize-0 - 2;
-    line-height: 97px;
-    letter-spacing: -0.16px;
+    font-size: $fontSize-0;
+    line-height: 70px;
 }
 
 h2 {
     font-size: $fontSize-1;
     line-height: 62px;
-    letter-spacing: -0.10px;
 }
 
 h3 {
@@ -38,7 +36,6 @@ h3 {
 h4 {
     font-size: $fontSize-4 - 1;
     line-height: 46px;
-    letter-spacing: 0.07px;
 
     @media (max-width: $brMobile) {
        font-size: $fontSize-5 + 2;
@@ -60,7 +57,7 @@ h6 {
     font-size: $fontSize-7;
     line-height: 27px;
     letter-spacing: -0.1px;
-    font-weight: $wgtBold;
+    font-family: 'allerbold';
 
     @media (max-width: $brMobile) {
        font-size: $fontSize-7 - 2;
@@ -78,5 +75,5 @@ a {
 }
 
 strong {
-	font-weight: $wgtBold;
+	font-family: 'allerbold';
 }  
