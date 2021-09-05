@@ -1,40 +1,28 @@
 <section id="faq">
     <div class="container-max">
-        <div class="content-accordion">
-            <?php
-            if( have_rows('investment_listings') ):
-                while( have_rows('investment_listings') ) : the_row(); ?>
-                    <div class="acc-item" data-sal="slide-up" data-sal-easing="ease">
-                        <div class="acc-item__left">
-                            <div class="logo">
-                                <?php 
-                                    $image = get_sub_field('investment_listings_logo'); 
-                                    $link = get_sub_field('investment_listings_link');
-                                ?>
-                                <?php if ($link): ?>
-                                    <a href="<?php echo $link; ?>" class="elink">	
-                                <?php endif ?>
-                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="">
-                                <?php if ($link): ?>
-                                    </a>	
-                                <?php endif ?>
-                            </div>
-                        </div>
-                        <div class="acc-item__right">
+        <div class="content-acc flex justify-space-bet">
+            <div class="content-acc_left">
+                <div class="content-wrap">
+                    <?= get_sub_field('left_content'); ?>
+                </div>
+            </div>
+            <div class="content-acc_right">
+                <?php
+                if( have_rows('add_faq') ):
+                    while( have_rows('add_faq') ) : the_row(); ?>
+                        <div class="acc-item">
                             <div class="acc-title">
-                                <?php the_sub_field('investment_listings_content_intro'); ?>
+                                <?= get_sub_field('question'); ?>
                             </div>
                             <div class="acc-body">
-                                <?php the_sub_field('investment_listings_content'); ?>
+                                <?= get_sub_field('answer'); ?>
                             </div>
+                            <span id="open-close-btn"></span>
                         </div>
-                        <a href="" class="open-close-btn" aria-label="Click for details about <?php the_sub_field('investment_company_name'); ?>">
-                            <span></span>
-                        </a>
-                    </div>
-                <?php
-                endwhile;
-            endif; ?>										
+                    <?php
+                    endwhile;
+                endif; ?>	
+            </div>
         </div>
     </div>
 </section>

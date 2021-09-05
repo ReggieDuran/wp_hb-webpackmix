@@ -27,6 +27,7 @@ $(document).ready(function(){
 	disableSubmitBtn();
 	sliderBanner();
 	howItWorksSlider();
+	accordion();
 });
 
 $(window).on('scroll',function(){
@@ -119,4 +120,44 @@ function howItWorksSlider() {
 			}
 		}
 	});
+}
+
+
+function accordion() {
+	const accordion = document.querySelector('#faq .content-acc');
+
+	if (accordion === null) {
+		return;
+	}
+
+	const items = accordion.querySelectorAll('.acc-item');
+
+	items.forEach((item) => {
+		const openCloseBtn = item.querySelector('#open-close-btn');
+		openCloseBtn.textContent = '+';
+		const title = item.querySelector('.acc-title');
+		
+		title.addEventListener('click', (e) => {
+			e.preventDefault();
+			const opened_item = accordion.querySelector('.is-open');
+
+			if (opened_item && opened_item !== item) {
+				toggle_item(opened_item);
+			}
+			
+			toggle_item(item); 
+		});
+	});
+
+	const toggle_item = (item) => {
+		const button = item.querySelector('#open-close-btn');
+
+		if (item.classList.contains('is-open')) {
+			item.classList.remove('is-open');
+			button.textContent = '+';
+		} else {
+			item.classList.add('is-open');
+			button.textContent = '-';
+		}
+	}
 }

@@ -1,0 +1,80 @@
+#faq {
+    padding: 80px 0;
+
+    .content-acc {
+        flex-wrap: wrap;
+    }
+
+    .content-acc_left div {
+        max-width: 390px;
+
+        @media(max-width:$brMobile) {
+            max-width: 100%;
+            text-align: center;
+        }
+
+        p {
+            color: $color-5;
+            margin-bottom: 25px;
+            font-size: $fontSize-7 - 2;
+        }
+
+        a {
+            color: $color-3;
+            font-family: 'allerbold';
+            font-size: $fontSize-8;
+        }
+    }
+
+    .content-acc_right {
+        flex-basis: 60%;
+
+        @media(max-width:$brMobile) {
+            flex-basis: 100%;
+        }
+    }
+
+    h3 {
+        color: $color-2;
+        margin-bottom: 20px;
+    }
+
+    .acc-item {
+        color: $color-5;
+        padding-bottom: 30px;
+        position: relative;
+        font-size: $fontSize-8;
+        line-height: 20px;
+
+        &.is-open {
+            .acc-title {
+                color: $color-3;
+            }            
+
+            .acc-body {
+                opacity: 1;
+                height: auto;
+                margin-top: 28px;
+            }
+
+            #open-close-btn {
+                color: $color-2;
+            }
+        }
+    }
+
+    .acc-body {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        @include transition( height $duration-1 $easeOutExpo, opacity $duration-0 $easeInOutExpo );
+    }
+      
+    #open-close-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        cursor: pointer;
+        font-size: $fontSize-7;
+    }
+}
