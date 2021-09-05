@@ -1,3 +1,101 @@
 #slider-banner {
     height: 800px;
+    box-shadow: 0px 1px 15px 3px rgba(0,0,0,.1);
+    border-bottom: 8px solid $color-0;
+
+    @media(max-width: $brMobile) {
+        height: 630px;
+        border-bottom: none;
+        box-shadow: none;
+    }
+
+    .owl-carousel,
+    .owl-stage-outer,
+    .owl-stage,
+    .owl-item,
+    .slider-item {
+        height: 100%;
+    }
+
+    h1 {
+        margin-bottom: 35px;
+
+        @media(max-width: $brMobile) {
+            font-size: $fontSize-3;
+            line-height: 40px;
+        }
+    }
+
+    p {
+        font-size: $fontSize-6 + 1;
+        line-height: 30px;
+
+        @media(max-width: $brMobile) {
+            font-size: $fontSize-7 - 2;
+            line-height: 22px;
+        }
+    }
+
+    .slider-item {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .slider-content {
+        color: $color-0;
+        max-width: 650px;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        left: calc(-50% + 60px);
+        z-index: 3;
+
+        @media(max-width: $brMobile) {
+            max-width: 100%;
+            left: 0;
+            padding: 0 30px;
+            text-align: center;
+            top: auto;
+            transform: none;
+            bottom: 70px;
+        }
+    }
+
+    .overlay-bg {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgb(0,0,0);
+        background: linear-gradient(90deg, rgba(0,0,0,0.5) 0%, rgba(255,255,255,0.3) 25%, rgba(0,0,0,0.5) 70%);
+    }
+
+    .owl-dots {
+        position: absolute;
+        right: 27px;
+        display: flex;
+        flex-direction: column;
+        top: 50%;
+        @include transform(translateY(-50%));
+
+        @media(max-width:$brMobile) {
+            display: none;
+        }
+
+        button.active span {
+             background: $color-0;
+        }
+        
+        span {
+            height: 75px;
+            width: 7px;
+            background: $color-7;
+            display: block;
+            margin: 2px 0;
+        }
+    }
 }

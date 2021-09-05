@@ -1,10 +1,13 @@
 #two-col {
+    margin-bottom: 65px;
+    
     .right-col,
     .left-col {
         flex: 1 1 50%;
         padding-top: 50px;
         padding-bottom: 50px;
         border-radius: 20px;
+        background: $color-0;
     }
 
     .right-col {

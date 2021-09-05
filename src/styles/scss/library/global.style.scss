@@ -165,3 +165,12 @@ select {
 		transform: none;
 	}
 }
+
+body.home #two-col {
+	margin-top: -130px;
+	z-index: 1;
+
+	@media(max-width: $brMobile) {
+		margin-top: 0;
+	}
+}
