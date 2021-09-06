@@ -28,6 +28,7 @@ $(document).ready(function(){
 	sliderBanner();
 	howItWorksSlider();
 	accordion();
+	testimonialSlider();
 });
 
 $(window).on('scroll',function(){
@@ -101,6 +102,24 @@ function sliderBanner() {
 		dots: true,
 		autoplay: true,
 		smartSpeed: 700,
+	});
+}
+
+
+
+function testimonialSlider() {
+	
+	$('#testimonials .owl-carousel').owlCarousel({
+		items: 2,
+		loop: true,
+		margin: 30,
+		smartSpeed: 700,
+		// responsive:{
+		// 	0:{
+		// 		items:1,
+		// 		dots: true
+		// 	}
+		// }
 	});
 }
 

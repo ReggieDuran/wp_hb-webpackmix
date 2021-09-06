@@ -23,12 +23,15 @@
 					// Case: Social links layout.
 					elseif( get_row_layout() == 'banner_slider_section' ): 
 						get_template_part('components/banner-slider');
-						// Case: FAQ layout.
+					// Case: FAQ layout.
 					elseif( get_row_layout() == 'faq_section' ): 
 						get_template_part('components/faq');
 					// Case: How it works layout.
 					elseif( get_row_layout() == 'how_it_works_section' ):
 						get_template_part('components/how-it-works');
+					// Case: Testimonial layout.
+					elseif( get_row_layout() == 'testimonials_section' ):
+						get_template_part('components/testimonials');
 					endif;
 				// End loop.
 				endwhile;

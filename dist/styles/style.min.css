@@ -1645,3 +1645,71 @@ body.active-header_js .menu-hamburger span:after {
   cursor: pointer;
   font-size: 20px;
 }
+
+#testimonials {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top left;
+  height: 660px;
+}
+
+#testimonials .testimonial-wrap {
+  width: 50%;
+  margin-left: auto;
+}
+
+#testimonials .owl-carousel {
+  max-width: 855px;
+}
+
+#testimonials .owl-stage {
+  display: flex;
+}
+
+#testimonials .slider-item {
+  height: auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 9px 3px rgba(0, 0, 0, 0.1);
+  margin: 10px 30px 10px 10px;
+}
+
+#testimonials .slider-content {
+  margin-bottom: 30px;
+}
+
+#testimonials .slider-content h6 {
+  margin-bottom: 8px;
+}
+
+#testimonials .slider-content p {
+  font-size: 15px;
+  color: #999999;
+}
+
+#testimonials .slider-profile {
+  color: #333333;
+  font-size: 15px;
+  font-family: 'allerbold';
+}
+
+#testimonials .slider-profile img {
+  margin-right: 20px;
+  width: auto;
+}
+
+#testimonials .top-content {
+  margin-bottom: 40px;
+  max-width: 500px;
+  width: 100%;
+}
+
+#testimonials .top-content p {
+  color: #999999;
+  font-size: 18px;
+}
+
+#testimonials .top-content h3 {
+  margin-bottom: 13px;
+}
