@@ -1,4 +1,6 @@
 #how-it-works {
+    margin-top: 35px;
+
     .title-wrap {
         max-width: 525px;
         margin: 0 auto 70px;
@@ -153,4 +155,8 @@ body.home #how-it-works::after {
     background: $color-3;
     text-align: center;
     margin: 0 auto;
+}
+
+body.page-template-default #how-it-works {
+    margin-top: 80px;
 }
