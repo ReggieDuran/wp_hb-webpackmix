@@ -28,6 +28,9 @@
 					// Case: How it works layout.
 					elseif( get_row_layout() == 'how_it_works_section' ):
 						get_template_part('components/how-it-works');
+					// Case: Service layout.
+					elseif( get_row_layout() == 'service_section' ):
+						get_template_part('components/service');
 					// Case: Testimonial layout.
 					elseif( get_row_layout() == 'testimonials_section' ):
 						get_template_part('components/testimonials');

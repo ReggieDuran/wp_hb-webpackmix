@@ -133,7 +133,7 @@ function testimonialSlider() {
 }
 
 function howItWorksSlider() {
-	$('#how-it-works .owl-carousel').owlCarousel({
+	$('#how-it-works .owl-carousel, #service .owl-carousel').owlCarousel({
 		smartSpeed: 700,
 		responsive:{
 			0:{
