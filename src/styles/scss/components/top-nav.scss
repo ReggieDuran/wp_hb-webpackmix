@@ -1,9 +1,15 @@
 .top-nav {
     height: 38px;
+
+    .container-max {
+        @media(max-width: $brMobile) {
+            padding: 0 13px;
+        }
+    }
     
     ul {
         @media(max-width:$brMobile) {
-            justify-content: center;
+            justify-content: space-around;
         }
     }
 
@@ -11,9 +17,15 @@
         font-size: $fontSize-8;
         color: $color-0;
         margin-left: 8px;
+        line-height: 23px;
+        letter-spacing: 0.25px;
     }
 
     li {
         padding-left: 23px;
+
+        @media(max-width: $brMobile) {
+            padding-left: 0;
+        }
     }
 }

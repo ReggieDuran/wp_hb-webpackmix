@@ -1,5 +1,9 @@
 #two-col {
     margin-bottom: 65px;
+
+    @media(max-width:$brMobile) {
+        margin-bottom: 55px;
+    }
     
     .right-col,
     .left-col {
@@ -12,21 +16,63 @@
 
     .right-col {
         margin-left: 30px;
+
+        @media(max-width:$brMobile) {
+            margin: 0px;
+            padding-top: 0;
+            padding-bottom: 57px;
+        }
     }
 
     .left-col {
         margin-right: 30px;
+
+        @media(max-width:$brMobile) {
+            margin: 0px;
+            padding-bottom: 37px;
+        }
     }
 
     .col-wrap {
         max-width: 370px;
         width: 100%;
         margin: 0 auto;
+
+        img {
+            margin-bottom: 29px;
+
+            @media(max-width:$brMobile) {
+                margin-bottom: 22px;
+            }
+        }
     }
 
     .container-max {
         @media(max-width: $brMobile) {
             flex-direction: column;
         }
+    }
+
+    h6 {
+        color: $color-2;
+        margin-bottom: 10px;
+    }
+
+    p {
+        line-height: 24px;
+        color: $color-5;
+        font-size: $fontSize-8;
+    }
+}
+
+body.home #two-col::after {
+    @media(max-width:$brMobile) {
+        content: '';
+        display: block;
+        width: 210px;
+        height: 1px;
+        background: $color-3;
+        text-align: center;
+        margin: 0 auto;
     }
 }

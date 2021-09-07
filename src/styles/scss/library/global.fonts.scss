@@ -15,17 +15,17 @@ h5 {
 
 h1 {
     font-size: $fontSize-0;
-    line-height: 70px;
+    line-height: 73px;
+    letter-spacing: 0.25px;
 }
 
 h2 {
     font-size: $fontSize-1;
-    line-height: 62px;
 }
 
 h3 {
     font-size: $fontSize-3;
-    line-height: 49px;
+    line-height: 73px;
 
     @media ( max-width: $brMobile ) {
         line-height: 36px;

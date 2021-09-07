@@ -114,12 +114,21 @@ function testimonialSlider() {
 		loop: true,
 		margin: 30,
 		smartSpeed: 700,
-		// responsive:{
-		// 	0:{
-		// 		items:1,
-		// 		dots: true
-		// 	}
-		// }
+		responsive:{
+			0:{
+				items:1,
+				margin: 0,
+			},
+			600:{
+				items:1,
+				dots: true,
+				margin: 0,
+			},
+			1000:{
+				items:2,
+				margin: 0,
+			}
+		}
 	});
 }
 

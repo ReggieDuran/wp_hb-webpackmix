@@ -4,7 +4,7 @@
         if( have_rows('slider') ):
             while( have_rows('slider') ) : the_row();
                 ?>
-                <div class="slider-item" <?= get_sub_field('background_image') ? 'style="background: url(' . get_sub_field('background_image')['url'] . ');"' : '' ?>>
+                <div class="slider-item" <?= get_sub_field('background_image') ? 'style="background-image: url(' . get_sub_field('background_image')['url'] . ');"' : '' ?>>
                     <div class="overlay-bg"></div>
                     
                     <div class="slider-content">

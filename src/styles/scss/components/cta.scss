@@ -3,7 +3,7 @@
 
     @media(max-width: $brMobile) {
         height: auto;
-        padding: 40px 0 50px;
+        padding: 50px 0 70px;
     }
 
     .container-max {
@@ -16,12 +16,16 @@
         color: $color-0;
 
         @media(max-width: $brMobile) {
-            margin-bottom: 30px;
+            margin-bottom: 50px;
+            font-size: $fontSize-5;
+            line-height: 37px;
         }
     }
 
     .btn {
         font-family: 'allerbold';
+        padding: 12px 40px;
+        font-size: $fontSize-7;
     }
 
     img {

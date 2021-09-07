@@ -1,5 +1,9 @@
 #faq {
-    padding: 80px 0;
+    padding: 60px 0 90px;
+
+    @media(max-width:$brMobile) {
+        padding: 40px 0 35px;
+    }
 
     .content-acc {
         flex-wrap: wrap;
@@ -28,6 +32,7 @@
 
     .content-acc_right {
         flex-basis: 60%;
+        margin-top: 25px;
 
         @media(max-width:$brMobile) {
             flex-basis: 100%;

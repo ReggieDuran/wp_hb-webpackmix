@@ -8,7 +8,7 @@
             if( have_rows('add_testimonial') ):
                 while( have_rows('add_testimonial') ) : the_row();
                     ?>
-                    <div class="slider-item" style="width:400px">
+                    <div class="slider-item" style="width:25rem">
                         <div class="slider-content">
                             <?= get_sub_field('content'); ?>
                         </div>

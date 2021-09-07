@@ -18,7 +18,7 @@
     }
 
     h1 {
-        margin-bottom: 35px;
+        margin-bottom: 30px;
 
         @media(max-width: $brMobile) {
             font-size: $fontSize-3;
@@ -28,7 +28,7 @@
 
     p {
         font-size: $fontSize-6 + 1;
-        line-height: 30px;
+        line-height: 35px;
 
         @media(max-width: $brMobile) {
             font-size: $fontSize-7 - 2;
@@ -51,6 +51,11 @@
         transform: translateY(-50%);
         left: calc(-50% + 60px);
         z-index: 3;
+        padding-right: 40px;
+
+        @media(max-width: 1400px) {
+            left: 30%;
+        }
 
         @media(max-width: $brMobile) {
             max-width: 100%;

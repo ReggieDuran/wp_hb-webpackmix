@@ -48,8 +48,10 @@
 			<div class="container-max">
 				<div class="flex items-center justify-space-bet">
 					<?php $logo = get_field('logo', 'option'); ?>
-					<div class="site-logo">
-						<img src="<?= $logo['url'] ?>" alt="Helperbees Logo">
+					<div class="site-logo flex items-center">
+						<a href="<?= get_site_url(); ?>">
+							<img src="<?= $logo['url'] ?>" alt="Helperbees Logo">
+						</a>
 					</div>
 					<?php 
 						wp_nav_menu( array(

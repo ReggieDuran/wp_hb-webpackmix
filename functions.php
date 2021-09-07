@@ -33,18 +33,5 @@
 	}
     
 
-    add_post_type_support( 'page', 'excerpt' );
-    add_theme_support( 'title-tag' );
-    function rudr_add_new_tags_metabox(){
-        $id = 'rudrtagsdiv-post_tag'; // it should be unique
-        $heading = 'Tags'; // meta box heading
-        $callback = 'rudr_metabox_content'; // the name of the callback function
-        $post_type = 'post';
-        $position = 'side';
-        $pri = 'default'; // priority, 'default' is good for us
-        add_meta_box($id, $heading, $callback, $post_type, $position, $pri );
-    }
-    add_action( 'admin_menu', 'rudr_add_new_tags_metabox');
-
 
    

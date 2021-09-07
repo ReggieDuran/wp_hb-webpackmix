@@ -16,7 +16,7 @@
 							// Do something... 
 							?>
 							<div class="contact-link">
-								<h6><?= $title ?></h6>
+								<h6 class="show-dktp"><?= $title ?></h6>
 								<p><?= $desc ?></p>
 								<ul>
 								<?php 
@@ -29,7 +29,7 @@
 											$link_title = $link['title'];
 											$link_target = $link['target'] ? $link['target'] : '_self';
 										endif; ?>
-										<li class="flex items-center">
+										<li class="flex">
 											<img src="<?= $icon['url'] ?>" alt="">
 											<a class="button" href="<?php echo esc_url( $link_url ); ?>" target="<?php echo esc_attr( $link_target ); ?>"><?php echo esc_html( $link_title ); ?></a>
 										</li>
@@ -46,7 +46,7 @@
 							// Do something...
 							?>
 							<div class="menu-link">
-								<h6><?= $title ?></h6>
+								<h6 class="show-dktp"><?= $title ?></h6>
 								<ul>
 								<?php 
 								if( have_rows('add_link', 'option') ):
@@ -74,7 +74,7 @@
 							// Do something...
 							?>
 							<div class="social-link">
-								<h6><?= $title ?></h6>
+								<h6 class="show-dktp"><?= $title ?></h6>
 								<ul class="flex">
 								<?php 
 								if( have_rows('add_social_links', 'option') ):
@@ -91,7 +91,7 @@
 								endif;
 								?>
 								</ul>
-								<p><?= $desc ?></p>
+								<p class="show-dktp"><?= $desc ?></p>
 							</div>
 							<?php
 						endif;

@@ -5,13 +5,25 @@
         width: 100%;
 
         p {
-            font-size: $fontSize-7 - 2;
             color: $color-5;
+            font-size: $fontSize-7 - 2;
+            line-height: 24px;
+
+            @media(max-width:$brMobile){
+                font-size: $fontSize-8 + 1;
+                line-height: 22px;
+            }
         }
     }
 
     h3 {
-        margin-bottom: 15px;
+        color: $color-2;
+        margin-bottom: 7px;
+
+        @media(max-width:$brMobile){
+            font-size: $fontSize-5;
+            margin-bottom: 20px;
+        }
     }
 
     .slider-image {
@@ -20,8 +32,9 @@
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        margin: 0 auto 70px;
+        margin: 0 auto 65px;
         border-radius: 20px;
+        position: relative;
 
         @media(max-width:$brDesktop) {
             width: 90%;
@@ -29,6 +42,7 @@
 
         @media(max-width:$brMobile) {
             height: 250px;
+            margin: 0 auto 40px;
         }
     }
 
@@ -47,12 +61,13 @@
     .slider-item {
         h6 {
             color: $color-2;
-            margin-bottom: 11px;
+            margin-bottom: 8px;
         }
 
         p {
             color: $color-5;
             font-size: $fontSize-8;
+
         }
     }
 
@@ -98,4 +113,44 @@
             margin: 0 4px
         }
     }
+
+    .slider-num {
+        color: $color-0;
+        background: $color-8;
+        height: 42px;
+        width: 42px;
+        position: absolute;
+        border-radius: 50%;
+        bottom: -21px;
+        left: 0;
+        text-align: center;
+        margin: 0 auto;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $fontSize-8;
+        font-family: 'allerbold';
+
+        &::after {
+            display: block;
+            content: '';
+            background: $color-8;
+            height: 62px;
+            width: 62px;
+            opacity: .3;
+            position: absolute;
+            border-radius: 50%;
+        }
+    }
+}
+
+body.home #how-it-works::after {
+    content: '';
+    display: block;
+    width: 210px;
+    height: 1px;
+    background: $color-3;
+    text-align: center;
+    margin: 0 auto;
 }
