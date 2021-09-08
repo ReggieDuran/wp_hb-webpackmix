@@ -1,6 +1,10 @@
 #about-us {
     padding: 85px 0 100px;
 
+    @media (max-width: 1200px) {
+        padding: 65px 0 70px;
+    }
+
     .top-content {
         margin-bottom: 60px;
 
@@ -19,9 +23,30 @@
 
     p {
         color: $color-5;
+
+        @media (max-width: 1200px) {
+            br {
+                display: none;
+            }
+        }
+    }
+
+    .three-col {
+        @media (max-width: 1200px) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        @media (max-width: $brMobile) {
+            justify-content: center;
+        }
     }
     
     .content {
         max-width: 360px;
+
+        @media (max-width: 1200px) {
+            margin-bottom: 30px;
+        }
     }
 }

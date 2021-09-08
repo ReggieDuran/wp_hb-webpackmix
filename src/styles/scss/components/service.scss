@@ -18,7 +18,6 @@
         p {
             color: $color-5;
             font-size: $fontSize-7 - 2;
-            line-height: 24px;
 
             @media(max-width:$brMobile){
                 font-size: $fontSize-8 + 1;
@@ -28,7 +27,6 @@
     }
 
     h3 {
-        color: $color-2;
         margin-bottom: 7px;
 
         @media(max-width:$brMobile){
@@ -47,11 +45,8 @@
         box-shadow: 1px 1px 5px 2px rgba(0,0,0,0.10);
 
         @media(max-width:$brDesktop) {
-            width: 90%;
-        }
-
-        @media(max-width:$brMobile) {
             margin: 0 auto 30px;
+            width: 90%;
         }
 
         img {
@@ -61,7 +56,6 @@
         }
 
         h6 {
-            color: $color-2;
             margin-bottom: 8px;
         }
 
@@ -123,36 +117,6 @@
             display: block;
             border-radius: 2px;
             margin: 0 4px
-        }
-    }
-
-    .slider-num {
-        color: $color-0;
-        background: $color-8;
-        height: 42px;
-        width: 42px;
-        position: absolute;
-        border-radius: 50%;
-        bottom: -21px;
-        left: 0;
-        text-align: center;
-        margin: 0 auto;
-        right: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: $fontSize-8;
-        font-family: 'allerbold';
-
-        &::after {
-            display: block;
-            content: '';
-            background: $color-8;
-            height: 62px;
-            width: 62px;
-            opacity: .3;
-            position: absolute;
-            border-radius: 50%;
         }
     }
 }

@@ -40,6 +40,9 @@
 					// Case: About Us layout.
 					elseif( get_row_layout() == 'about_us_three_column' ):
 						get_template_part('components/about-us');
+					// Case: Profile layout.
+					elseif( get_row_layout() == 'profile_section' ):
+						get_template_part('components/profile');
 					endif;
 				// End loop.
 				endwhile;
