@@ -43,6 +43,9 @@
 					// Case: Profile layout.
 					elseif( get_row_layout() == 'profile_section' ):
 						get_template_part('components/profile');
+					// Case: News Section layout.
+					elseif( get_row_layout() == 'news_section' ):
+						get_template_part('components/news');
 					endif;
 				// End loop.
 				endwhile;
