@@ -37,6 +37,9 @@
 					// Case: Search layout.
 					elseif( get_row_layout() == 'search_section' ):
 						get_template_part('components/search');
+					// Case: About Us layout.
+					elseif( get_row_layout() == 'about_us_three_column' ):
+						get_template_part('components/about-us');
 					endif;
 				// End loop.
 				endwhile;

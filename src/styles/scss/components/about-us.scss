@@ -1,0 +1,27 @@
+#about-us {
+    padding: 85px 0 100px;
+
+    .top-content {
+        margin-bottom: 60px;
+
+        p {
+            font-size: $fontSize-8 + 3;
+        }
+    }
+
+    h3 {
+        margin-bottom: 17px;
+    }
+
+    h6 {
+        margin-bottom: 25px;
+    }
+
+    p {
+        color: $color-5;
+    }
+    
+    .content {
+        max-width: 360px;
+    }
+}
