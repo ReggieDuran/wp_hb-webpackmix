@@ -1,0 +1,45 @@
+.search-wrap {
+    width: 100%;
+    padding: 48px;
+    position: relative;
+    border-radius: 15px;
+    background: $color-0;
+    z-index: 2;
+
+    * {
+        font-size: $fontSize-7;
+        font-family: 'allerbold';
+    }
+
+    input {
+        width: 100%;
+        border: none;
+        background: $color-10;
+        height: 80px;
+        padding-left: 25px;
+    }
+
+    input::placeholder {
+        color: $color-2;
+        font-size: $fontSize-7;
+        font-family: 'allerbold';
+    }
+
+    span {
+        position: absolute;
+        right: 50px;
+        background: $color-3;
+        border-radius: 7px;
+        margin: 10px;
+        height: 60px;
+        width: 180px;
+        text-align: center;
+        line-height: 60px;
+        color: $color-0;
+        cursor: pointer;
+    }
+
+    i {
+        margin-right: 8px;
+    }
+}

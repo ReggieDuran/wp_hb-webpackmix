@@ -34,6 +34,9 @@
 					// Case: Testimonial layout.
 					elseif( get_row_layout() == 'testimonials_section' ):
 						get_template_part('components/testimonials');
+					// Case: Search layout.
+					elseif( get_row_layout() == 'search_section' ):
+						get_template_part('components/search');
 					endif;
 				// End loop.
 				endwhile;

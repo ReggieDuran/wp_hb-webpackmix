@@ -7,9 +7,9 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-<!-- <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"> -->
-<!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> -->
 <link rel="stylesheet" href="<?= get_template_directory_uri(); ?>/dist/styles/style.min.css" media="all"/>
+<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
 <!--[if lt IE 9]>
     <script src="node_modules/html5shiv/dist/html5shiv.js"></script>
 <![endif]-->
@@ -48,8 +48,8 @@
 			<div class="container-max">
 				<div class="flex items-center justify-space-bet">
 					<?php $logo = get_field('logo', 'option'); ?>
-					<div class="site-logo flex items-center">
-						<a href="<?= get_site_url(); ?>">
+					<div class="site-logo">
+						<a class="flex items-center" href="<?= get_site_url(); ?>">
 							<img src="<?= $logo['url'] ?>" alt="Helperbees Logo">
 						</a>
 					</div>

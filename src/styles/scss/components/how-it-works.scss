@@ -147,16 +147,6 @@
     }
 }
 
-body.home #how-it-works::after {
-    content: '';
-    display: block;
-    width: 210px;
-    height: 1px;
-    background: $color-3;
-    text-align: center;
-    margin: 0 auto;
-}
-
 body.page-template-default #how-it-works {
     margin-top: 80px;
 }
