@@ -56,6 +56,10 @@
     h6 {
         color: $color-2;
         margin-bottom: 10px;
+
+        @media(max-width: $brMobile) {
+            font-size: $fontSize-7;
+        }
     }
 
     p {

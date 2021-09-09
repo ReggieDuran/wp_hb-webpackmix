@@ -6,6 +6,10 @@
         margin: 0 auto 70px;
         width: 100%;
 
+        @media(max-width:$brMobile) {
+            margin: 0 auto 45px;
+        }
+
         p {
             color: $color-5;
             font-size: $fontSize-7 - 2;
@@ -43,8 +47,8 @@
         }
 
         @media(max-width:$brMobile) {
-            height: 250px;
-            margin: 0 auto 40px;
+            margin: 0 auto 70px;
+            width: 82%;
         }
     }
 
@@ -64,6 +68,10 @@
         h6 {
             color: $color-2;
             margin-bottom: 8px;
+
+            @media(max-width: $brMobile) {
+                font-size: $fontSize-7;
+            }
         }
 
         p {

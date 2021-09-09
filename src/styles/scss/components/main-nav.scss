@@ -152,7 +152,18 @@ body.active-header_js {
             display: flex;
             flex-direction: column;
             width: 100%;
-            top: 168px;
+            top: 148px;
+
+            @media (max-width: $brTablet) {
+                height: auto;
+                border-top: 1px solid $color-5;
+            }
+
+            li {
+                @media (max-width: $brTablet) {
+                    height: auto;
+                }
+            }
 
             a br {
                 display: none;

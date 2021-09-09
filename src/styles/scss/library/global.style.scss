@@ -134,6 +134,12 @@ select {
 	padding: 10px 20px;
 	border: 2px solid $color-0;
 	color: $color-0;
+	@include transition(background $duration-0 $easeInOutExpo, color $duration-0 $easeInOutExpo);
+
+	&:hover {
+		background: $color-0;
+		color: $color-3;
+	}
 }
 
 #main-wrapper {

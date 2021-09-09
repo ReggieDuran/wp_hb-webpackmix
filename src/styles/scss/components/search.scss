@@ -1,3 +1,9 @@
+#search {
+    @media(max-width:$brMobile) {
+        padding-top: 20px;
+    }
+}
+
 .search-wrap {
     width: 100%;
     padding: 48px;
@@ -5,6 +11,10 @@
     border-radius: 15px;
     background: $color-0;
     z-index: 2;
+
+    @media(max-width:$brMobile) {
+        padding: 15px;
+    }
 
     * {
         font-size: $fontSize-7;
@@ -23,6 +33,10 @@
         color: $color-2;
         font-size: $fontSize-7;
         font-family: 'allerbold';
+
+        @media(max-width:$brMobile) {
+            font-size: $fontSize-8 + 1;
+        }
     }
 
     span {
@@ -33,13 +47,16 @@
         margin: 10px;
         height: 60px;
         width: 180px;
-        text-align: center;
-        line-height: 60px;
         color: $color-0;
         cursor: pointer;
+
+        @media(max-width:$brMobile) {
+            right: 17px;
+        }
     }
 
     i {
         margin-right: 8px;
+        font-size: $fontSize-5;
     }
 }

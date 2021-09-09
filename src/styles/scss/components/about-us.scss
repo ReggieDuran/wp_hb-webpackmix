@@ -43,10 +43,16 @@
     }
     
     .content {
-        max-width: 360px;
-
         @media (max-width: 1200px) {
             margin-bottom: 30px;
+        }
+
+        max-width: 360px;
+
+        p {
+            @media (max-width: $brMobile) {
+                text-align: center;
+            }
         }
     }
 }

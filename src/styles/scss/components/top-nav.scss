@@ -22,10 +22,20 @@
     }
 
     li {
-        padding-left: 23px;
-
         @media(max-width: $brMobile) {
             padding-left: 0;
+        }
+
+        padding-left: 23px;
+
+        * {
+            @include transition(opacity $duration-0 $easeInOutExpo);
+        }
+
+        &:hover {
+            * {
+                opacity: .7;
+            }
         }
     }
 }

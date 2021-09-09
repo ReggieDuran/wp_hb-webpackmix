@@ -162,20 +162,31 @@ function accordion() {
 
 	items.forEach((item) => {
 		const openCloseBtn = item.querySelector('#open-close-btn');
-		openCloseBtn.textContent = '+';
 		const title = item.querySelector('.acc-title');
+		openCloseBtn.textContent = '+';
 		
 		title.addEventListener('click', (e) => {
 			e.preventDefault();
-			const opened_item = accordion.querySelector('.is-open');
-
-			if (opened_item && opened_item !== item) {
-				toggle_item(opened_item);
-			}
 			
+			checkToggleItem(item);
+			toggle_item(item); 
+		});
+
+		openCloseBtn.addEventListener('click', (e) => {
+			e.preventDefault();
+			
+			checkToggleItem(item);
 			toggle_item(item); 
 		});
 	});
+
+	const checkToggleItem = (item) => {
+		const opened_item = accordion.querySelector('.is-open');
+
+		if (opened_item && opened_item !== item) {
+			toggle_item(opened_item);
+		}
+	}
 
 	const toggle_item = (item) => {
 		const button = item.querySelector('#open-close-btn');
@@ -189,3 +200,11 @@ function accordion() {
 		}
 	}
 }
+
+function reportWindowSize() {
+  if (window.innerWidth > 1024) {
+	  document.body.classList.remove('active-header_js')
+  }
+}
+
+window.onresize = reportWindowSize;

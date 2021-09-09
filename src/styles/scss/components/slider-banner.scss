@@ -19,11 +19,6 @@
 
     h1 {
         margin-bottom: 30px;
-
-        @media(max-width: $brMobile) {
-            font-size: $fontSize-3;
-            line-height: 40px;
-        }
     }
 
     p {
@@ -32,7 +27,7 @@
 
         @media(max-width: $brMobile) {
             font-size: $fontSize-7 - 2;
-            line-height: 22px;
+            line-height: 24px;
         }
     }
 

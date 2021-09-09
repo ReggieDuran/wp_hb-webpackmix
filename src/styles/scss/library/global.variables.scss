@@ -9,6 +9,23 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'aller_lightregular';
+    src: url('./../fonts/aller_lt-webfont.woff2') format('woff2'),
+         url('./../fonts/aller_lt-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'allerregular';
+    src: url('./../fonts/aller_rg-webfont.woff2') format('woff2'),
+         url('./../fonts/aller_rg-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // MAX WIDTH
 $maxWidth : 1236px; 
 
@@ -51,7 +68,7 @@ $wgtBold 	: 	700;
 
 // MEDIA QUERY
 $brDesktop		: 1238px;
-$brTablet      	: 991px;
+$brTablet      	: 1024px;
 $brMobile      	: 768px;
 $brMobileSmall 	: 480px;
 
