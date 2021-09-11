@@ -60,7 +60,7 @@
 						) );
 					?>
 					<div class="mobile-nav">
-						<div class="menu-hamburger">
+						<div id="menu-hamburger">
 							<span></span>
 						</div>
 					</div>

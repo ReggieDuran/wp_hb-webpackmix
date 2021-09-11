@@ -81,7 +81,7 @@
     }
 }
 
-.menu-hamburger {
+#menu-hamburger {
     width: 34px;
     height: 21px;
     background: transparent;
@@ -171,7 +171,7 @@ body.active-header_js {
         }
     }
 
-	.menu-hamburger {
+	#menu-hamburger {
 		span {
 			background: transparent !important;
 		    @include transition(all 0.2s ease-out);

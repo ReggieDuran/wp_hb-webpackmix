@@ -1,13 +1,96 @@
 import $ from "jquery";
 import 'owl.carousel';
 
+(function(funcName, baseObj) {
+    // The public function name defaults to window.docReady
+    // but you can pass in your own object and own function name and those will be used
+    // if you want to put them in a different namespace
+    funcName = funcName || "docReady";
+    baseObj = baseObj || window;
+    var readyList = [];
+    var readyFired = false;
+    var readyEventHandlersInstalled = false;
 
-// LOAD
-$(window).on('load',function(){
+    // call this when the document is ready
+    // this function protects itself against being called more than once
+    function ready() {
+        if (!readyFired) {
+            // this must be set to true before we start calling callbacks
+            readyFired = true;
+            for (var i = 0; i < readyList.length; i++) {
+                // if a callback here happens to add new ready handlers,
+                // the docReady() function will see that it already fired
+                // and will schedule the callback to run right after
+                // this event loop finishes so all handlers will still execute
+                // in order and no new ones will be added to the readyList
+                // while we are processing the list
+                readyList[i].fn.call(window, readyList[i].ctx);
+            }
+            // allow any closures held by these functions to free
+            readyList = [];
+        }
+    }
 
+    function readyStateChange() {
+        if ( document.readyState === "complete" ) {
+            ready();
+        }
+    }
+
+    // This is the one public interface
+    // docReady(fn, context);
+    // the context argument is optional - if present, it will be passed
+    // as an argument to the callback
+    baseObj[funcName] = function(callback, context) {
+        if (typeof callback !== "function") {
+            throw new TypeError("callback for docReady(fn) must be a function");
+        }
+        // if ready has already fired, then just schedule the callback
+        // to fire asynchronously, but right away
+        if (readyFired) {
+            setTimeout(function() {callback(context);}, 1);
+            return;
+        } else {
+            // add the function and context to the list
+            readyList.push({fn: callback, ctx: context});
+        }
+        // if document already ready to go, schedule the ready function to run
+        if (document.readyState === "complete") {
+            setTimeout(ready, 1);
+        } else if (!readyEventHandlersInstalled) {
+            // otherwise if we don't have event handlers installed, install them
+            if (document.addEventListener) {
+                // first choice is DOMContentLoaded event
+                document.addEventListener("DOMContentLoaded", ready, false);
+                // backup is window load event
+                window.addEventListener("load", ready, false);
+            } else {
+                // must be IE
+                document.attachEvent("onreadystatechange", readyStateChange);
+                window.attachEvent("onload", ready);
+            }
+            readyEventHandlersInstalled = true;
+        }
+    }
+})("docReady", window);
+
+// Dom is ready
+docReady(function() {
+	navToggle();
+	sliderBanner();
+	howItWorksSlider();
+	accordion();
+	testimonialSlider();
+});
+
+// Window onload
+window.onload = function() {
 	setTimeout(function(){
 		// $('#preloader').removeClass('animate');
-		$('.no-scroll_js').removeClass('no-scroll_js');
+		const noScollJs = document.querySelector('.no-scroll_js');
+		if (noScollJs) {
+			noScollJs.classList.remove('no-scroll_js');
+		}
 
 		setTimeout(function() {
 			// var sal = require('sal.js');
@@ -16,84 +99,35 @@ $(window).on('load',function(){
 			// 	threshold: 0.5,
 			// 	once: true,
 			// });
-		},200)
+		}, 200);
 
-	},500);
-});
+	}, 500);
+}
 
-$(document).ready(function(){	
-	stickyMenu();
-	navToggle();
-	disableSubmitBtn();
-	sliderBanner();
-	howItWorksSlider();
-	accordion();
-	testimonialSlider();
-});
+// Window onresize
+window.onresize = reportWindowSize;
 
-$(window).on('scroll',function(){
-	stickyMenu();
-});
-
-
-// FUNCTION
+// Function lists.
 function navToggle() {
-	$('.menu-hamburger').on('click',function(e) {
-		e.preventDefault();
+	const menuHamburder = document.getElementById('menu-hamburger');
+	if (menuHamburder) {
+		menuHamburder.addEventListener('click', function(e) {
+			e.preventDefault();
 		
-		if ( $('body').hasClass('active-header_js') ) {
-			$('body').removeClass('active-header_js');
-			
-			setTimeout(function(){
-				$('body').removeClass('no-scroll_js');
-			},1000);
-
-		} else {
-			$('body').addClass('active-header_js');
-			$('body').addClass('no-scroll_js');
-		}
-	});
-}
-
-function stickyMenu() {
-	if ($(window).scrollTop() > 80 ) {
-		if (!$('header').hasClass('sticky_js')) { 
-			$('header').addClass('sticky_js'); 
-			$('.search').removeClass('active');
-		}		
-	} else {				
-		if ($('header').hasClass('sticky_js')) { 
-			$('header').removeClass('sticky_js');
-		}
+			if ( document.body.classList.contains('active-header_js') ) {
+				document.body.classList.remove('active-header_js');
+				
+				setTimeout(function(){
+					document.body.classList.remove('no-scroll_js');
+				},1000);
+	
+			} else {
+				document.body.classList.add('active-header_js');
+				document.body.classList.add('no-scroll_js');
+			}
+		});
 	}
 }
-
-function disableSubmitBtn() {
-	/**
-	 * Disable WPCF7 button while it's submitting
-	 * Stops duplicate enquiries coming through
-	 */
-	var disableSubmit = false;
-	$('input[type="submit"]').click(function() {
-		$(this).attr('value', 'sent');
-		$(this).addClass('sent');
-		if (disableSubmit == true) {
-			$(this).attr('disabled', true);
-			return false;
-		}
-		disableSubmit = true;
-		return true;
-	})
-	 
-	var wpcf7Elm = document.querySelector( '.wpcf7' );
-	if ( wpcf7Elm ) {
-		wpcf7Elm.addEventListener( 'wpcf7submit', function( event ) {
-			$('input[type="submit"]').attr('value', 'send')
-			disableSubmit = false;
-		}, false );
-	}
-}
-
 
 function sliderBanner() {
 	$('#slider-banner .owl-carousel').owlCarousel({
@@ -105,10 +139,7 @@ function sliderBanner() {
 	});
 }
 
-
-
 function testimonialSlider() {
-	
 	$('#testimonials .owl-carousel').owlCarousel({
 		items: 2,
 		loop: true,
@@ -149,7 +180,6 @@ function howItWorksSlider() {
 		}
 	});
 }
-
 
 function accordion() {
 	const accordion = document.querySelector('#faq .content-acc');
@@ -206,5 +236,3 @@ function reportWindowSize() {
 	  document.body.classList.remove('active-header_js')
   }
 }
-
-window.onresize = reportWindowSize;
