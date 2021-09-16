@@ -12,6 +12,11 @@
     background: $color-0;
     z-index: 2;
 
+    @media(max-width:$brMobileSmall) {
+        display: block;
+        text-align: center;
+    }
+
     @media(max-width:$brMobile) {
         padding: 15px;
     }
@@ -52,6 +57,12 @@
 
         @media(max-width:$brMobile) {
             right: 17px;
+        }
+
+        @media(max-width:$brMobileSmall) {
+            right: 0;
+            margin: 10px auto;
+            position: relative;
         }
     }
 

@@ -13,13 +13,23 @@
         }
     }
 
-    ul li:not(:last-child) {
-        &::after {
-            content: '|';
-            display: block;
-            margin-left: 10px;
-            color: $color-0;
-            margin-right: 8px;
+    ul li {
+        &:not(:last-child) {
+            &::after {
+                content: '|';
+                display: block;
+                margin-left: 10px;
+                color: $color-0;
+                margin-right: 8px;
+            }
+        }
+
+        a {
+            @include transition(color $duration-0 $easeInOutExpo);
+        }
+
+        &:hover a {
+            color: $color-3;
         }
     }
 

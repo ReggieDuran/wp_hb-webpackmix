@@ -28,11 +28,6 @@
 
     h1 {
         margin-bottom: 30px;
-
-        @media(max-width: $brMobile) {
-            font-size: $fontSize-3;
-            line-height: 40px;
-        }
     }
 
     p {
@@ -79,5 +74,9 @@
         height: 100%;
         background: rgb(0,0,0);
         background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0.1) 25%, rgba(0,0,0,0.7) 70%);
+
+        @media(max-width: $brMobile) {
+            background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.7) 70%);
+        }
     }
 }

@@ -74,6 +74,12 @@
     
         a {
             color: $color-3;
+            font-family: 'allerbold';
+            @include transition(color $duration-0 $easeInOutExpo);
+
+            &:hover {
+                color: $color-2;
+            }
         }
     
         span,
@@ -99,6 +105,11 @@
         border-bottom-right-radius: 15px;
         left: -11px;
         top: 35px;
+        font-size: $fontSize-8;
+
+        > * {
+            font-size: $fontSize-7 + 1;
+        }
 
         &::after {
             content: "";
@@ -122,6 +133,14 @@
             font-size: $fontSize-7;
             color: $color-3;
             font-family: 'allerbold';
+        }
+
+        a, span {
+            @include transition(opacity $duration-0 $easeInOutExpo);
+            
+            &:hover {
+                opacity: .7;
+            }
         }
 
         .current {
