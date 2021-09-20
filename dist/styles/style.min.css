@@ -1644,8 +1644,7 @@ body.active-header_js #menu-hamburger span:after {
   color: #ffffff;
   max-width: 650px;
   position: absolute;
-  top: 40%;
-  transform: translateY(-50%);
+  top: 18%;
   left: calc(-50% + 60px);
   z-index: 3;
   padding-right: 40px;

@@ -93,12 +93,12 @@ window.onload = function() {
 		}
 
 		setTimeout(function() {
-			// var sal = require('sal.js');
+			var sal = require('sal.js');
 
-			// sal({
-			// 	threshold: 0.5,
-			// 	once: true,
-			// });
+			sal({
+				threshold: 0.5,
+				once: true,
+			});
 		}, 200);
 
 	}, 500);
