@@ -1,0 +1,43 @@
+#two-column {
+    padding: 90px 0;
+
+    .top-content {
+        margin-bottom: 63px;
+
+        h3 {
+            margin-bottom: 5px;
+        }
+
+        p {
+            font-size: $fontSize-8 + 3;
+        }
+    }
+
+    .two-col {
+        @media(max-width: $brMobile) {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    .left-col {
+        padding-right: 42px;
+
+        @media(max-width: $brMobile) {
+            padding-right: 0;
+            padding-bottom: 30px;
+        }
+    }
+
+    .right-col {
+         padding-left: 42px;
+
+         @media(max-width: $brMobile) {
+            padding-left: 0;
+        }
+    }
+
+    p {
+        color: $color-5;
+    }
+}

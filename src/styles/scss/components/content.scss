@@ -1,0 +1,62 @@
+#content {
+    .container-max {
+        padding: 120px 60px 110px;
+    }
+
+    .date-author {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+
+        sup {
+            vertical-align: top;
+            font-size: smaller;
+        }
+
+        span {
+            font-size: $fontSize-8 + 3;
+        }
+
+        span:first-of-type {
+            padding-right: 10px;
+        }
+
+        span:last-of-type {
+            padding-left: 10px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .author {
+        color: $color-3;
+        font-family: 'allerbold';
+        margin-bottom: 0;
+        padding-left: 4px;
+    }
+
+    p {
+        font-size: $fontSize-8 + 3;
+        color: $color-5;
+        margin-bottom: 20px;
+    }
+
+    blockquote {
+        margin: 75px 148px;
+        padding: 50px 45px;
+        border-left: 5px solid $color-3;
+
+        @media(max-width: $brMobile) {
+            margin: 35px;
+            padding: 35px;
+        }
+        
+        p {
+            color: $color-2;
+            font-size: $fontSize-7 + 1;
+            line-height: 27px;
+            font-family: 'allerbold';
+            margin-bottom: 0;
+        }
+    }
+}

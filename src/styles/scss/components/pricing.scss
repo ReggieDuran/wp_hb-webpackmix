@@ -1,0 +1,134 @@
+#pricing {
+    padding: 40px 0 130px;
+
+    .container-max {
+        padding: 0 48px;
+        position: relative;
+
+        @media(max-width:$brMobile) {
+            flex-wrap: wrap;
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: calc(100% - 96px);
+            height: 1px;
+            background: $color-2;
+            bottom: 81px;
+
+            @media(max-width:$brMobile) {
+                display: none;
+            }
+        }
+    }
+
+    .flex-col {
+        max-width: 220px;
+        width: 100%;
+
+        @media(max-width:$brMobile) {
+            margin-bottom: 50px;
+        }
+
+        @media(max-width:$brMobileSmall) {
+            max-width: 100%;
+        }
+
+        &.mid-col {
+            max-width: 345px;
+        }
+    }
+
+    span {
+        width: 100%;
+        font-size: $fontSize-8 + 1;
+        line-height: 24px;
+
+        &:nth-last-child(2):not(span.client-pay) {
+            height: 355px;
+        }
+
+        &:last-of-type:not(span.agreed-rate) {
+            margin-top: 35px;
+            font-size: $fontSize-8 + 3;
+            color: $color-5;
+            padding: 0 15px;
+        }
+    }
+    
+    .agreed-rate {
+        font-family: 'allerbold';
+    }
+
+    .client-pay {
+        margin-bottom: 25px;
+    }
+
+    .client-pay,
+    .agreed-rate {
+        font-size: $fontSize-8 + 3;
+        color: $color-5;
+    }
+
+    .client-fee,
+    .admin-fee {
+        height: 60px;
+    }
+
+    .client-fee {
+        background: $color-12;
+    }
+
+    .earn {
+        line-height: 30px;
+        font-size: $fontSize-7 + 3;
+        font-family: 'allerbold';
+        padding: 0 45px;
+    }
+
+    .first-col  {
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: calc(100% - 791px);
+            height: 1px;
+            background: $color-12;
+            top: 59px;
+            left: 48px;
+        }
+
+        .earn {
+            color: $color-0;
+            background: $color-14;
+        }
+
+        .admin-fee {
+            color: $color-0;
+            background: $color-5;
+        }
+    }
+
+    .last-col {
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            width: calc(100% - 791px);
+            height: 1px;
+            background: $color-12;
+            top: 59px;
+            right: 48px;
+        }
+
+        .earn {
+            background: $color-8;
+        }
+
+        .admin-fee {
+            background: $color-13;
+        }
+    }
+}

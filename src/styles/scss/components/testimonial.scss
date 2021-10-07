@@ -5,6 +5,10 @@
     height: 660px;
     border-bottom: 13px solid $color-3;
 
+    @media(max-width:1400px) {
+        background-size: cover;
+    }
+
     @media(max-width:$brTablet) {
         background: none !important;
         height: auto;

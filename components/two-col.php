@@ -1,18 +1,15 @@
-<section id="two-col">
-    <div class="container-max flex justify-space-bet">
-        <div class="left-col text-center" data-sal="slide-right" data-sal-easing="ease" data-sal-delay="200">
-            <div class="col-wrap flex flex-col justify-center items-center">
-                <img src="<?= get_sub_field('icon_left')['url'] ?>" alt="">
-                <h6><?= get_sub_field('title_left') ?></h6>
-                <p><?= get_sub_field('description_left') ?></p>
+<section id="two-column">
+    <div class="container-max">
+        <div class="top-content">
+            <?= get_sub_field('top_content'); ?>
+        </div>
+        <div class="two-col flex justify-space-bet">
+            <div class="left-col">
+                <?= get_sub_field('content_left') ?>
+            </div>
+            <div class="right-col">
+                <?= get_sub_field('content_right_copy') ?>
             </div>
         </div>
-        <div class="right-col text-center" data-sal="slide-left" data-sal-easing="ease" data-sal-delay="200">
-            <div class="col-wrap flex flex-col justify-center items-center">
-                <img src="<?= get_sub_field('icon_right')['url'] ?>" alt="">
-                <h6><?= get_sub_field('title_right') ?></h6>
-                <p><?= get_sub_field('description_right') ?></p>
-            </div>
-        </div>
-    </div>    
+    </div>
 </section>
